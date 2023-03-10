@@ -178,20 +178,20 @@ namespace Corewebapi.Controllers
 
         private async Task<bool> ValidateUpdateWalkAsync(Models.DTO.UpdateWalkRequest updateWalkRequest)
         {
-            if (updateWalkRequest == null)
-            {
-                ModelState.AddModelError(nameof(updateWalkRequest), $"{nameof(updateWalkRequest)} cannot be empty");
-                return false;
-            }
+            //if (updateWalkRequest == null)
+            //{
+            //    ModelState.AddModelError(nameof(updateWalkRequest), $"{nameof(updateWalkRequest)} cannot be empty");
+            //    return false;
+            //}
 
-            if (string.IsNullOrWhiteSpace(updateWalkRequest.Name))
-            {
-                ModelState.AddModelError(nameof(updateWalkRequest.Name), $"{nameof(updateWalkRequest.Name)} cannot be empty.");
-            }
-            if (updateWalkRequest.Length < 0)
-            {
-                ModelState.AddModelError(nameof(updateWalkRequest.Length), $"{nameof(updateWalkRequest.Length)} cannot be less than Zero.");
-            }
+            //if (string.IsNullOrWhiteSpace(updateWalkRequest.Name))
+            //{
+            //    ModelState.AddModelError(nameof(updateWalkRequest.Name), $"{nameof(updateWalkRequest.Name)} cannot be empty.");
+            //}
+            //if (updateWalkRequest.Length < 0)
+            //{
+            //    ModelState.AddModelError(nameof(updateWalkRequest.Length), $"{nameof(updateWalkRequest.Length)} cannot be less than Zero.");
+            //}
 
             var region = await regionRepository.GetAsync(updateWalkRequest.RegionId);
             if (region == null)

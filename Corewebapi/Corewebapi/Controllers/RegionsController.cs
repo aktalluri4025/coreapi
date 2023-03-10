@@ -69,10 +69,10 @@ namespace Corewebapi.Controllers
 
         public async Task<IActionResult> AddRegionAsync(Models.DTO.AddRegionRequest addRegionRequest)
         {
-            if(!ValidateAddRegionAsync(addRegionRequest))
-            {
-                return BadRequest(ModelState);
-            }
+            //if(!ValidateAddRegionAsync(addRegionRequest))
+            //{
+            //    return BadRequest(ModelState);
+            //}
 
             var region = new Models.Domain.Region()
             {
