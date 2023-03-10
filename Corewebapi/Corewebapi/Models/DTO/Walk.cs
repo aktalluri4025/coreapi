@@ -1,4 +1,4 @@
-﻿namespace Corewebapi.Models.Domain
+﻿namespace Corewebapi.Models.DTO
 {
     public class Walk
     {
@@ -8,13 +8,7 @@
         public Guid RegionId { get; set; }
         public Guid WalkDifficultyId { get; set; }
 
-
         public Region Region { get; set; }
         public WalkDifficulty walkDifficulty { get; set; }
-
-        internal object ToList()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
